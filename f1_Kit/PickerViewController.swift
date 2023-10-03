@@ -7,12 +7,20 @@
 
 import UIKit
 
+protocol PickerViewControllerDelegate {
+    func selectedOption (rank: String, season: String)
+}
+
 class PickerViewController: UIViewController {
+    
+    var delegate: PickerViewControllerDelegate?
     
     @IBOutlet weak var pickerView: UIPickerView!
     
     let ranks = ["Drivers", "Constructors"]
     let seasons = Array((2013...2023).reversed())
+    var selectedRank = "Drivers"
+    var selectedYear = "2023"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +35,9 @@ class PickerViewController: UIViewController {
     }
     
     @IBAction func doneButtontap(_ sender: UIBarButtonItem) {
-        print("Done button pressed")
+        
+        delegate?.selectedOption(rank: selectedRank, season: selectedYear)
+        dismiss(animated: true)
     }
 }
 
@@ -60,12 +70,11 @@ extension PickerViewController: UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         if component == 0 {
-            print(ranks[row])
+            selectedRank = ranks[row]
         } else {
             let seasonStrings = seasons.map { String($0) }
-            print(seasonStrings[row])
+            selectedYear = seasonStrings[row]
         }
-//        print("Selected \(rank) ranking in \(year)")
     }
 }
 

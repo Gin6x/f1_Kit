@@ -24,9 +24,8 @@
                                     <constraint firstAttribute="width" constant="135" id="4dm-4M-LR3"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Driver" titleAlignment="center"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Drivers" titleAlignment="center"/>
                                 <connections>
-                                    <action selector="rankButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OYV-jp-dxS"/>
                                     <segue destination="ddu-SM-cCb" kind="presentation" identifier="showPickerVC" id="ZyU-cJ-zdM"/>
                                 </connections>
                             </button>

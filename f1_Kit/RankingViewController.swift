@@ -15,6 +15,7 @@ class RankingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         rankButton.layer.cornerRadius = 12
         rankButton.layer.masksToBounds = true
         yearButton.layer.cornerRadius = 12
@@ -22,13 +23,37 @@ class RankingViewController: UIViewController {
         
     }
     
-    @IBAction func rankButtonTap(_ sender: UIButton) {
-        performSegue(withIdentifier: "showPickerVC", sender: nil)
+//    @IBAction func rankButtonTap(_ sender: UIButton) {
+//        performSegue(withIdentifier: "showPickerVC", sender: nil)
+//        
+//    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showPickerVC" {
+            if let pickerVC = segue.destination as? PickerViewController {
+                pickerVC.delegate = self
+            }
+        }
     }
     
     @IBAction func yearButtonTap(_ sender: UIButton) {
         performSegue(withIdentifier: "showPickerVC", sender: nil)
     }
+    
+    
+}
+
+extension RankingViewController: PickerViewControllerDelegate {
+    
+    func selectedOption(rank: String, season: String) {
+        
+        rankButton.setTitle(rank, for: .normal)
+        yearButton.setTitle(season, for: .normal)
+        print("Checking \(rank) ranking in \(season)")
+        
+        
+    }
+    
     
 }
 
