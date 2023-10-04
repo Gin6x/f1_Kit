@@ -14,6 +14,7 @@
 		BE9A64A02AC1CD4100A540F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE9A649E2AC1CD4100A540F2 /* LaunchScreen.storyboard */; };
 		BE9A64AD2AC4795500A540F2 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9A64AC2AC4795500A540F2 /* PickerViewController.swift */; };
 		BE9A64B12AC7060A00A540F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE9A64AF2AC7060A00A540F2 /* Main.storyboard */; };
+		BE9A64B32ACC7C4B00A540F2 /* Ranking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9A64B22ACC7C4B00A540F2 /* Ranking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		BE9A64A12AC1CD4100A540F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE9A64AC2AC4795500A540F2 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		BE9A64B02AC7060A00A540F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BE9A64B22ACC7C4B00A540F2 /* Ranking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ranking.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 		BE9A64AE2AC4795D00A540F2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BE9A64B22ACC7C4B00A540F2 /* Ranking.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 				BE9A64942AC1CD4000A540F2 /* AppDelegate.swift in Sources */,
 				BE9A64AD2AC4795500A540F2 /* PickerViewController.swift in Sources */,
 				BE9A64962AC1CD4000A540F2 /* SceneDelegate.swift in Sources */,
+				BE9A64B32ACC7C4B00A540F2 /* Ranking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -36,7 +36,11 @@ class PickerViewController: UIViewController {
     
     @IBAction func doneButtontap(_ sender: UIBarButtonItem) {
         
-        delegate?.selectedOption(rank: selectedRank, season: selectedYear)
+        if selectedRank == "Drivers" {
+            delegate?.selectedOption(rank: "drivers", season: selectedYear)
+        } else {
+            delegate?.selectedOption(rank: "teams", season: selectedYear)
+        }
         dismiss(animated: true)
     }
 }
