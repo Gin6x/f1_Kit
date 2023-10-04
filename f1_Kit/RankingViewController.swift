@@ -118,8 +118,10 @@ extension RankingViewController: UITableViewDelegate, UITableViewDataSource {
                     rankingCell.driverNameLabel.text = response.team.name
                 }
                 
-                if let points = response.points {
+                if let points = response.points, points > 0 {
                     rankingCell.pointsLabel.text = String(points)
+                } else {
+                    rankingCell.pointsLabel.text = "n/a"
                 }
                 //Download and set image for team logo
                 let url = response.team.logo
