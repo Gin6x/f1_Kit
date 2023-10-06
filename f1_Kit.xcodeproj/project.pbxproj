@@ -15,6 +15,7 @@
 		BE9A64AD2AC4795500A540F2 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9A64AC2AC4795500A540F2 /* PickerViewController.swift */; };
 		BE9A64B12AC7060A00A540F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE9A64AF2AC7060A00A540F2 /* Main.storyboard */; };
 		BE9A64B32ACC7C4B00A540F2 /* Ranking.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9A64B22ACC7C4B00A540F2 /* Ranking.swift */; };
+		BE9A64BA2ACF0FB800A540F2 /* CircuitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9A64B92ACF0FB800A540F2 /* CircuitsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		BE9A64AC2AC4795500A540F2 /* PickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		BE9A64B02AC7060A00A540F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BE9A64B22ACC7C4B00A540F2 /* Ranking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ranking.swift; sourceTree = "<group>"; };
+		BE9A64B92ACF0FB800A540F2 /* CircuitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		BE9A64922AC1CD4000A540F2 /* f1_Kit */ = {
 			isa = PBXGroup;
 			children = (
+				BE9A64B82ACF008B00A540F2 /* Circuit */,
 				BE9A64A92AC4546E00A540F2 /* Ranking */,
 				BE9A64AE2AC4795D00A540F2 /* Model */,
 				BE9A64932AC1CD4000A540F2 /* AppDelegate.swift */,
@@ -87,6 +90,14 @@
 				BE9A64B22ACC7C4B00A540F2 /* Ranking.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		BE9A64B82ACF008B00A540F2 /* Circuit */ = {
+			isa = PBXGroup;
+			children = (
+				BE9A64B92ACF0FB800A540F2 /* CircuitsViewController.swift */,
+			);
+			name = Circuit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +175,7 @@
 				BE9A64942AC1CD4000A540F2 /* AppDelegate.swift in Sources */,
 				BE9A64AD2AC4795500A540F2 /* PickerViewController.swift in Sources */,
 				BE9A64962AC1CD4000A540F2 /* SceneDelegate.swift in Sources */,
+				BE9A64BA2ACF0FB800A540F2 /* CircuitsViewController.swift in Sources */,
 				BE9A64B32ACC7C4B00A540F2 /* Ranking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,6 +336,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -352,6 +365,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

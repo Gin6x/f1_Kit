@@ -26,6 +26,7 @@ class RankingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
         rankButton.layer.cornerRadius = 12
         rankButton.layer.masksToBounds = true
         yearButton.layer.cornerRadius = 12
@@ -78,7 +79,6 @@ class RankingViewController: UIViewController {
                 print("Response HTTP Status code: \(response.statusCode)")
             }
             if let data = data, let rankingDatas = try? decoder.decode(Ranking.self, from: data) {
-                print(rankingDatas.response)
                 self.responses = rankingDatas.response
                 DispatchQueue.main.sync {
                     self.rankingTableView.reloadData()
@@ -121,7 +121,7 @@ extension RankingViewController: UITableViewDelegate, UITableViewDataSource {
                 if let points = response.points, points > 0 {
                     rankingCell.pointsLabel.text = String(points)
                 } else {
-                    rankingCell.pointsLabel.text = "n/a"
+                    rankingCell.pointsLabel.text = "0"
                 }
                 //Download and set image for team logo
                 let url = response.team.logo
