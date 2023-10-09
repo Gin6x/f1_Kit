@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE40F7B12AD4AA9B001DB39F /* Circuits.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE40F7B02AD4AA9B001DB39F /* Circuits.swift */; };
+		BE40F7B32AD4C1E7001DB39F /* DetailCircuitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE40F7B22AD4C1E7001DB39F /* DetailCircuitViewController.swift */; };
 		BE9A64942AC1CD4000A540F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9A64932AC1CD4000A540F2 /* AppDelegate.swift */; };
 		BE9A64962AC1CD4000A540F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9A64952AC1CD4000A540F2 /* SceneDelegate.swift */; };
 		BE9A64982AC1CD4000A540F2 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9A64972AC1CD4000A540F2 /* RankingViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE40F7B02AD4AA9B001DB39F /* Circuits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circuits.swift; sourceTree = "<group>"; };
+		BE40F7B22AD4C1E7001DB39F /* DetailCircuitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCircuitViewController.swift; sourceTree = "<group>"; };
 		BE9A64902AC1CD4000A540F2 /* f1_Kit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = f1_Kit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE9A64932AC1CD4000A540F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE9A64952AC1CD4000A540F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				BE9A64B92ACF0FB800A540F2 /* CircuitsViewController.swift */,
+				BE40F7B22AD4C1E7001DB39F /* DetailCircuitViewController.swift */,
+				BE40F7B02AD4AA9B001DB39F /* Circuits.swift */,
 			);
 			name = Circuit;
 			sourceTree = "<group>";
@@ -173,6 +179,8 @@
 			files = (
 				BE9A64982AC1CD4000A540F2 /* RankingViewController.swift in Sources */,
 				BE9A64942AC1CD4000A540F2 /* AppDelegate.swift in Sources */,
+				BE40F7B12AD4AA9B001DB39F /* Circuits.swift in Sources */,
+				BE40F7B32AD4C1E7001DB39F /* DetailCircuitViewController.swift in Sources */,
 				BE9A64AD2AC4795500A540F2 /* PickerViewController.swift in Sources */,
 				BE9A64962AC1CD4000A540F2 /* SceneDelegate.swift in Sources */,
 				BE9A64BA2ACF0FB800A540F2 /* CircuitsViewController.swift in Sources */,
