@@ -16,7 +16,9 @@ class CircuitCell: UICollectionViewCell {
 class CircuitsViewController: UIViewController {
    
     @IBOutlet weak var circuitsCollectionView: UICollectionView!
-    let circuits = Circuits()
+    
+    let localCircuits = LocalCircuits()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,24 +52,23 @@ extension CircuitsViewController: UICollectionViewDelegate,UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let circuitCell = circuitsCollectionView.dequeueReusableCell(withReuseIdentifier: "circuitCell", for: indexPath) as! CircuitCell
-        let circuitImage = circuits.image[indexPath.item]
+        let circuitImage = localCircuits.image[indexPath.item]
         circuitCell.circuitImageView.image = UIImage(named: circuitImage)
-        let circuitLabel = circuits.displayCircuitName[indexPath.item]
+        let circuitLabel = localCircuits.displayCircuitName[indexPath.item]
         circuitCell.circuitLabel.text = circuitLabel.uppercased()
         return circuitCell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        let selectedCell = collectionView.cellForItem(at: indexPath)
+
+        let apiSearchName = localCircuits.apiSearchName[indexPath.item]
+        let selectedCircuitImage = localCircuits.image[indexPath.item]
         
         if let detailCircuitVC = storyboard?.instantiateViewController(withIdentifier: "detailCircuitVC") as? DetailCircuitViewController {
+        
+            detailCircuitVC.circuitImageName = selectedCircuitImage
+            detailCircuitVC.apiSearchName = apiSearchName
             self.navigationController?.pushViewController(detailCircuitVC, animated: true)
         }
-        
-        let selectedCircuitName = circuits.apiSearchName[indexPath.item]
-        print(selectedCircuitName)
     }
-    
-    
 }

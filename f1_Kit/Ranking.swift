@@ -8,6 +8,7 @@
 import Foundation
 
 struct Ranking: Codable {
+    
     let get: String
     struct Parameters: Codable {
         let season: String
@@ -18,15 +19,12 @@ struct Ranking: Codable {
 }
 
 struct Responses: Codable {
+    
     let position: Int
     struct Driver: Codable {
         let name: String
     }
     let driver: Driver?
-    struct Team: Codable {
-        let name: String
-        let logo: URL
-    }
     let team: Team
     let points: Int?
 }

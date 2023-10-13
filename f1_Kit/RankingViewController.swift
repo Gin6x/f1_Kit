@@ -58,7 +58,7 @@ class RankingViewController: UIViewController {
                                             timeoutInterval: 10.0)
         
         let headers = [
-            "X-RapidAPI-Key": "6ecdce6c5amshe3e328919c857d9p15ec4cjsnedfd8e331d72",
+            "X-RapidAPI-Key": "abc",
             "X-RapidAPI-Host": "api-formula-1.p.rapidapi.com"
         ]
         
@@ -78,6 +78,7 @@ class RankingViewController: UIViewController {
             if let response = response as? HTTPURLResponse {
                 print("Response HTTP Status code: \(response.statusCode)")
             }
+            
             if let data = data, let rankingDatas = try? decoder.decode(Ranking.self, from: data) {
                 self.responses = rankingDatas.response
                 DispatchQueue.main.sync {
@@ -95,7 +96,6 @@ extension RankingViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        
         guard let responses = responses else { return 0 }
         return responses.count
     }
@@ -104,42 +104,40 @@ extension RankingViewController: UITableViewDelegate, UITableViewDataSource {
         
         let rankingCell = rankingTableView.dequeueReusableCell(withIdentifier: "rankingCell")! as UITableViewCell as! RankingCell
         
-        if let responses = responses, indexPath.section < responses.count {
-            for _ in responses {
-                
-                let response = responses[indexPath.section]
-                rankingCell.rankLabel.text = String(response.position)
-                
-                if rankButton.titleLabel?.text == "Drivers" {
-                    if let driver = response.driver {
-                        rankingCell.driverNameLabel.text = driver.name
-                    }
-                } else {
-                    rankingCell.driverNameLabel.text = response.team.name
-                }
-                
-                if let points = response.points, points > 0 {
-                    rankingCell.pointsLabel.text = String(points)
-                } else {
-                    rankingCell.pointsLabel.text = "0"
-                }
-                //Download and set image for team logo
-                let url = response.team.logo
-                if let cachedImage = imageCache[url] {
-                    rankingCell.teamLogoImageView.image = cachedImage
-                } else {
-                    DispatchQueue.global().async {
-                        if let data = try? Data(contentsOf: url), let image = UIImage(data: data) {
-                            self.imageCache[url] = image
-                            DispatchQueue.main.async {
-                                rankingCell.teamLogoImageView.image = image
-                            }
-                        }
-                    }
-                }
+        if let responses = responses {
+            rankingCell.rankLabel.text = String(responses[indexPath.section].position)
+            rankingCell.driverNameLabel.text = responses[indexPath.section].driver?.name
+            if let points = responses[indexPath.section].points, points > 0 {
+                rankingCell.pointsLabel.text = String(points)
+            } else {
+                rankingCell.pointsLabel.text = "0"
             }
+            rankingCell.teamLogoImageView.downloaded(from: responses[indexPath.section].team.logo)
         }
         return rankingCell
+    }
+}
+
+extension UIImageView {
+    
+    func downloaded(from url: URL, contentMode mode: ContentMode = .scaleAspectFit) {
+        contentMode = mode
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard
+                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
+                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
+                let data = data, error == nil,
+                let image = UIImage(data: data)
+                else { return }
+            DispatchQueue.main.async() { [weak self] in
+                self?.image = image
+            }
+        }.resume()
+    }
+    
+    func downloaded(from link: String, contentMode mode: ContentMode = .scaleAspectFit) {
+        guard let url = URL(string: link) else { return }
+        downloaded(from: url, contentMode: mode)
     }
 }
 
