@@ -1,0 +1,15 @@
+info.plist
+
+# Xcode
+.DS_Store
+build/
+DerivedData/
+
+# Swift Package Manager
+.build/
+Package.resolved
+
+# macOS
+.AppleDouble
+.LSOverride
+
