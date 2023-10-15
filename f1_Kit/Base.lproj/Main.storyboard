@@ -119,6 +119,10 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="qG6-OP-ZyW">
+                                <rect key="frame" x="150" y="137" width="93" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="1" green="0.15686274509803921" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -135,6 +139,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Ranking" id="qZE-b8-hRV"/>
                     <connections>
+                        <outlet property="loadingIndicator" destination="qG6-OP-ZyW" id="H7E-2R-lLT"/>
                         <outlet property="rankButton" destination="Tli-va-0RS" id="fRz-xp-oJJ"/>
                         <outlet property="rankingTableView" destination="uIM-6r-wPU" id="1jd-ac-ZRb"/>
                         <outlet property="yearButton" destination="Ac4-xD-wmp" id="qnR-KY-r0e"/>
@@ -300,6 +305,10 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="1Wa-Xk-DEq">
+                                <rect key="frame" x="150" y="356" width="93" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="47S-gF-Nb4"/>
                         <color key="backgroundColor" red="0.94509803920000002" green="0.15989860889999999" blue="0.024276088920000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -331,6 +340,7 @@
                         <outlet property="circuitLabel" destination="ajk-I9-0XJ" id="EB9-YZ-oh1"/>
                         <outlet property="driverNameLabel" destination="AHH-Xh-WUs" id="Bgo-H1-FkC"/>
                         <outlet property="lapsLabel" destination="Eej-9E-zGh" id="3MG-H1-IOY"/>
+                        <outlet property="loadingIndicator" destination="1Wa-Xk-DEq" id="YmH-yf-cGo"/>
                         <outlet property="raceDistanceLabel" destination="lln-3c-uHs" id="t68-ce-9CT"/>
                         <outlet property="timeLabel" destination="Uw6-Pl-Xvv" id="bNb-hq-DFy"/>
                         <outlet property="yearLabel" destination="xi1-AK-4m5" id="mkx-Nt-BDB"/>

@@ -15,10 +15,10 @@ struct Ranking: Codable {
     }
     let parameters: Parameters
     let results: Int
-    var response: [Responses]
+    var response: [RankingResponses]
 }
 
-struct Responses: Codable {
+struct RankingResponses: Codable {
     
     let position: Int
     struct Driver: Codable {
