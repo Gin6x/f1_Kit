@@ -36,7 +36,7 @@ class RankingViewController: UIViewController {
         rankingTableView.delegate = self
         rankingTableView.dataSource = self
         rankingTableView.layer.cornerRadius = 10
-        getRanking(rank: "drivers", season: "2023")
+//        getRanking(rank: "drivers", season: "2023")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

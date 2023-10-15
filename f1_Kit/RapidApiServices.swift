@@ -18,7 +18,6 @@ class RapidApiServices {
                 fatalError("key file not found")
             }
             apiKey = plist.value(forKey: "apiKey") as? String ?? ""
-            print(apiKey)
         }
     
     enum RapidApiServicesError: Error, LocalizedError {
