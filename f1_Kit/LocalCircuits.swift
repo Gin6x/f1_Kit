@@ -13,8 +13,8 @@ struct LocalCircuits {
                 "canada", "austria", "great britain", "hungary", "belgium", "netherlands", "italy", "singapore",
                 "japan", "qatar", "united states", "mexico", "brazil", "us las vegas", "abu dhabi"]
     
-    let apiSearchName = ["bahrain", "jeddah", "albert park", "baku", "miami", "monaco", "barcelona", "gilles", "red bull",
-                         "silver", "hungaroring", "spa", "zandvoort", "monza", "marina bay", "suzuka", "losail", "americas",
+    let apiSearchName = ["bahrain", "jeddah", "albert", "baku", "miami", "monaco", "barcelona", "gilles", "red",
+                         "silver", "hungaroring", "spa", "zandvoort", "monza", "bay", "suzuka", "losail", "americas",
                          "hermanos", "carlos", "las vegas", "yas marina"]
     
     let image = ["bahrain", "jeddah", "albert_Park", "baku_City", "miami", "monaco", "barcelona", "gilles_Villeneuve", "redBull_Ring",

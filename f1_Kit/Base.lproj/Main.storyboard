@@ -119,18 +119,20 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="qG6-OP-ZyW">
-                                <rect key="frame" x="150" y="137" width="93" height="93"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="qG6-OP-ZyW">
+                                <rect key="frame" x="156" y="143" width="80" height="20"/>
                             </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="1" green="0.15686274509803921" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qG6-OP-ZyW" secondAttribute="trailing" constant="157" id="2cv-RO-Ew6"/>
                             <constraint firstItem="Tli-va-0RS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="4OX-It-bQ3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ac4-xD-wmp" secondAttribute="trailing" constant="30" id="5Hp-MD-emp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uIM-6r-wPU" secondAttribute="trailing" constant="16" id="7Fn-YZ-xgN"/>
+                            <constraint firstItem="qG6-OP-ZyW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="156" id="BOS-nr-PrW"/>
                             <constraint firstItem="uIM-6r-wPU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="JH4-WO-FKB"/>
+                            <constraint firstItem="qG6-OP-ZyW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="143" id="Ykp-Cv-aTD"/>
                             <constraint firstItem="uIM-6r-wPU" firstAttribute="top" secondItem="Tli-va-0RS" secondAttribute="bottom" constant="8" id="amg-rS-vmr"/>
                             <constraint firstItem="Tli-va-0RS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="pOf-FB-8hs"/>
                             <constraint firstItem="Ac4-xD-wmp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="vOC-oH-fss"/>
@@ -305,17 +307,19 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="1Wa-Xk-DEq">
-                                <rect key="frame" x="150" y="356" width="93" height="93"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="1Wa-Xk-DEq">
+                                <rect key="frame" x="150" y="356" width="93" height="20"/>
                             </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="47S-gF-Nb4"/>
                         <color key="backgroundColor" red="0.94509803920000002" green="0.15989860889999999" blue="0.024276088920000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="gPd-fX-O9I" firstAttribute="leading" secondItem="47S-gF-Nb4" secondAttribute="leading" constant="16" id="0g4-xk-4JM"/>
+                            <constraint firstItem="1Wa-Xk-DEq" firstAttribute="top" secondItem="ukB-Mg-fl6" secondAttribute="bottom" constant="11.67" id="CFe-gW-JCb"/>
                             <constraint firstItem="tdJ-gk-eDA" firstAttribute="top" secondItem="47S-gF-Nb4" secondAttribute="top" constant="8" id="FME-cY-EMF"/>
+                            <constraint firstItem="47S-gF-Nb4" firstAttribute="trailing" secondItem="1Wa-Xk-DEq" secondAttribute="trailing" constant="150" id="Fnw-fK-K5a"/>
                             <constraint firstItem="Uw6-Pl-Xvv" firstAttribute="leading" secondItem="47S-gF-Nb4" secondAttribute="leading" constant="16" id="Gbc-OY-aBW"/>
+                            <constraint firstItem="1Wa-Xk-DEq" firstAttribute="leading" secondItem="47S-gF-Nb4" secondAttribute="leading" constant="150" id="HCw-PJ-ai3"/>
                             <constraint firstItem="47S-gF-Nb4" firstAttribute="trailing" secondItem="ukB-Mg-fl6" secondAttribute="trailing" constant="16" id="JbC-cg-iiQ"/>
                             <constraint firstItem="47S-gF-Nb4" firstAttribute="trailing" secondItem="VAI-WR-Baq" secondAttribute="trailing" constant="16" id="Ngv-pr-J96"/>
                             <constraint firstItem="gPd-fX-O9I" firstAttribute="top" secondItem="Uw6-Pl-Xvv" secondAttribute="bottom" constant="8" id="Qqi-bf-3rh"/>
