@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -238,7 +239,7 @@
                                     <constraint firstAttribute="height" constant="205" id="UsU-xG-yN1"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CircuitName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajk-I9-0XJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="CircuitName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajk-I9-0XJ">
                                 <rect key="frame" x="16" y="288" width="361" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
@@ -284,7 +285,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1:31:02" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uw6-Pl-Xvv">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="1:31:02" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uw6-Pl-Xvv">
                                 <rect key="frame" x="16" y="424" width="361" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -310,11 +311,19 @@
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="1Wa-Xk-DEq">
                                 <rect key="frame" x="150" y="356" width="93" height="20"/>
                             </activityIndicatorView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nh5-jr-jIk">
+                                <rect key="frame" x="16" y="488.66666666666674" width="361" height="329.33333333333326"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="330" id="Iwh-5O-Scf"/>
+                                </constraints>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="47S-gF-Nb4"/>
                         <color key="backgroundColor" red="0.94509803920000002" green="0.15989860889999999" blue="0.024276088920000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="gPd-fX-O9I" firstAttribute="leading" secondItem="47S-gF-Nb4" secondAttribute="leading" constant="16" id="0g4-xk-4JM"/>
+                            <constraint firstItem="nh5-jr-jIk" firstAttribute="bottom" secondItem="47S-gF-Nb4" secondAttribute="bottom" id="AtZ-6d-4u1"/>
                             <constraint firstItem="1Wa-Xk-DEq" firstAttribute="top" secondItem="ukB-Mg-fl6" secondAttribute="bottom" constant="11.67" id="CFe-gW-JCb"/>
                             <constraint firstItem="tdJ-gk-eDA" firstAttribute="top" secondItem="47S-gF-Nb4" secondAttribute="top" constant="8" id="FME-cY-EMF"/>
                             <constraint firstItem="47S-gF-Nb4" firstAttribute="trailing" secondItem="1Wa-Xk-DEq" secondAttribute="trailing" constant="150" id="Fnw-fK-K5a"/>
@@ -323,12 +332,15 @@
                             <constraint firstItem="47S-gF-Nb4" firstAttribute="trailing" secondItem="ukB-Mg-fl6" secondAttribute="trailing" constant="16" id="JbC-cg-iiQ"/>
                             <constraint firstItem="47S-gF-Nb4" firstAttribute="trailing" secondItem="VAI-WR-Baq" secondAttribute="trailing" constant="16" id="Ngv-pr-J96"/>
                             <constraint firstItem="gPd-fX-O9I" firstAttribute="top" secondItem="Uw6-Pl-Xvv" secondAttribute="bottom" constant="8" id="Qqi-bf-3rh"/>
+                            <constraint firstItem="47S-gF-Nb4" firstAttribute="trailing" secondItem="nh5-jr-jIk" secondAttribute="trailing" constant="16" id="R5c-y2-5hh"/>
                             <constraint firstItem="tdJ-gk-eDA" firstAttribute="leading" secondItem="47S-gF-Nb4" secondAttribute="leading" constant="16" id="VZA-Bb-ya1"/>
                             <constraint firstItem="ukB-Mg-fl6" firstAttribute="top" secondItem="ajk-I9-0XJ" secondAttribute="bottom" constant="12" id="WA4-9c-m1P"/>
                             <constraint firstItem="VAI-WR-Baq" firstAttribute="top" secondItem="ukB-Mg-fl6" secondAttribute="bottom" constant="12" id="XJC-l2-0eS"/>
                             <constraint firstItem="Uw6-Pl-Xvv" firstAttribute="top" secondItem="pfw-7c-MIe" secondAttribute="bottom" constant="12" id="YHN-OS-OSs"/>
+                            <constraint firstItem="nh5-jr-jIk" firstAttribute="leading" secondItem="47S-gF-Nb4" secondAttribute="leading" constant="16" id="YLq-Uy-9RS"/>
                             <constraint firstItem="ajk-I9-0XJ" firstAttribute="leading" secondItem="47S-gF-Nb4" secondAttribute="leading" constant="16" id="Z2b-Ea-NDq"/>
                             <constraint firstItem="VAI-WR-Baq" firstAttribute="leading" secondItem="47S-gF-Nb4" secondAttribute="leading" constant="16" id="ZLm-3H-qKb"/>
+                            <constraint firstItem="nh5-jr-jIk" firstAttribute="top" secondItem="gPd-fX-O9I" secondAttribute="bottom" constant="16" id="ba5-Dy-CB9"/>
                             <constraint firstItem="47S-gF-Nb4" firstAttribute="trailing" secondItem="Uw6-Pl-Xvv" secondAttribute="trailing" constant="16" id="fHj-OH-iNy"/>
                             <constraint firstItem="pfw-7c-MIe" firstAttribute="leading" secondItem="47S-gF-Nb4" secondAttribute="leading" constant="16" id="hAh-J1-BeZ"/>
                             <constraint firstItem="47S-gF-Nb4" firstAttribute="trailing" secondItem="gPd-fX-O9I" secondAttribute="trailing" constant="16" id="kug-I2-wG6"/>
@@ -342,6 +354,7 @@
                     <connections>
                         <outlet property="circuitImageView" destination="tdJ-gk-eDA" id="fgM-9M-nk8"/>
                         <outlet property="circuitLabel" destination="ajk-I9-0XJ" id="EB9-YZ-oh1"/>
+                        <outlet property="circuitMapView" destination="nh5-jr-jIk" id="hvA-SR-6jy"/>
                         <outlet property="driverNameLabel" destination="AHH-Xh-WUs" id="Bgo-H1-FkC"/>
                         <outlet property="lapsLabel" destination="Eej-9E-zGh" id="3MG-H1-IOY"/>
                         <outlet property="loadingIndicator" destination="1Wa-Xk-DEq" id="YmH-yf-cGo"/>

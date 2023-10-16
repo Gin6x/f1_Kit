@@ -63,11 +63,15 @@ extension CircuitsViewController: UICollectionViewDelegate,UICollectionViewDataS
 
         let apiSearchName = localCircuits.apiSearchName[indexPath.item]
         let selectedCircuitImage = localCircuits.image[indexPath.item]
+        let circuitLat = localCircuits.circuitLatitude[indexPath.item]
+        let circuitLong = localCircuits.circuitLongitude[indexPath.item]
         
         if let detailCircuitVC = storyboard?.instantiateViewController(withIdentifier: "detailCircuitVC") as? DetailCircuitViewController {
         
             detailCircuitVC.circuitImageName = selectedCircuitImage
             detailCircuitVC.apiSearchName = apiSearchName
+            detailCircuitVC.latitude = circuitLat
+            detailCircuitVC.longitude = circuitLong
             self.navigationController?.pushViewController(detailCircuitVC, animated: true)
         }
     }
