@@ -1,5 +1,5 @@
 # f1_Kit
-This is a app for checking F1 race ranking and circuit location.
+This app is for checking F1 ranking and circuit location.
 
 Bulid with fully native Swift and MVC.
 
