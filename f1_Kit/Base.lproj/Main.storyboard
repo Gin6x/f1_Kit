@@ -48,7 +48,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uIM-6r-wPU">
-                                <rect key="frame" x="16" y="211" width="361" height="548"/>
+                                <rect key="frame" x="16" y="211" width="361" height="550"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="rankingCell" id="NpH-37-8X6" customClass="RankingCell" customModule="f1_Kit" customModuleProvider="target">
@@ -137,7 +137,7 @@
                             <constraint firstItem="uIM-6r-wPU" firstAttribute="top" secondItem="Tli-va-0RS" secondAttribute="bottom" constant="8" id="amg-rS-vmr"/>
                             <constraint firstItem="Tli-va-0RS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="pOf-FB-8hs"/>
                             <constraint firstItem="Ac4-xD-wmp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="vOC-oH-fss"/>
-                            <constraint firstItem="uIM-6r-wPU" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-10" id="yqR-E4-nD6"/>
+                            <constraint firstItem="uIM-6r-wPU" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-8" id="yqR-E4-nD6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Ranking" id="qZE-b8-hRV"/>
@@ -161,7 +161,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WQH-9w-BZ8">
-                                <rect key="frame" x="16" y="111" width="361" height="648"/>
+                                <rect key="frame" x="16" y="111" width="361" height="650"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XfO-rP-aQ9">
                                     <size key="itemSize" width="175" height="190"/>
@@ -210,7 +210,7 @@
                         <color key="backgroundColor" red="0.94509803921568625" green="0.16239938146435293" blue="0.024276088919999952" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="WQH-9w-BZ8" firstAttribute="leading" secondItem="g8m-da-kX1" secondAttribute="leading" constant="16" id="Acp-Ji-0NQ"/>
-                            <constraint firstItem="WQH-9w-BZ8" firstAttribute="bottom" secondItem="g8m-da-kX1" secondAttribute="bottom" constant="-10" id="AiW-dt-3uT"/>
+                            <constraint firstItem="WQH-9w-BZ8" firstAttribute="bottom" secondItem="g8m-da-kX1" secondAttribute="bottom" constant="-8" id="AiW-dt-3uT"/>
                             <constraint firstItem="g8m-da-kX1" firstAttribute="trailing" secondItem="WQH-9w-BZ8" secondAttribute="trailing" constant="16" id="F2a-jM-Fsw"/>
                             <constraint firstItem="WQH-9w-BZ8" firstAttribute="top" secondItem="g8m-da-kX1" secondAttribute="top" constant="8" id="lCr-bg-BY1"/>
                         </constraints>
@@ -312,7 +312,7 @@
                                 <rect key="frame" x="150" y="356" width="93" height="20"/>
                             </activityIndicatorView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nh5-jr-jIk">
-                                <rect key="frame" x="16" y="488.66666666666674" width="361" height="329.33333333333326"/>
+                                <rect key="frame" x="16" y="488.66666666666674" width="361" height="321.33333333333326"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="330" id="Iwh-5O-Scf"/>
                                 </constraints>
@@ -323,7 +323,7 @@
                         <color key="backgroundColor" red="0.94509803920000002" green="0.15989860889999999" blue="0.024276088920000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="gPd-fX-O9I" firstAttribute="leading" secondItem="47S-gF-Nb4" secondAttribute="leading" constant="16" id="0g4-xk-4JM"/>
-                            <constraint firstItem="nh5-jr-jIk" firstAttribute="bottom" secondItem="47S-gF-Nb4" secondAttribute="bottom" id="AtZ-6d-4u1"/>
+                            <constraint firstItem="nh5-jr-jIk" firstAttribute="bottom" secondItem="47S-gF-Nb4" secondAttribute="bottom" constant="-8" id="AtZ-6d-4u1"/>
                             <constraint firstItem="1Wa-Xk-DEq" firstAttribute="top" secondItem="ukB-Mg-fl6" secondAttribute="bottom" constant="11.67" id="CFe-gW-JCb"/>
                             <constraint firstItem="tdJ-gk-eDA" firstAttribute="top" secondItem="47S-gF-Nb4" secondAttribute="top" constant="8" id="FME-cY-EMF"/>
                             <constraint firstItem="47S-gF-Nb4" firstAttribute="trailing" secondItem="1Wa-Xk-DEq" secondAttribute="trailing" constant="150" id="Fnw-fK-K5a"/>
@@ -430,8 +430,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <tabBarAppearance key="standardAppearance">
+                            <color key="backgroundColor" red="0.94675070049999999" green="0.15989860889999999" blue="0.024276088920000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </tabBarAppearance>
                     </tabBar>
                     <connections>
                         <segue destination="hgZ-mb-gpf" kind="relationship" relationship="viewControllers" id="zr8-8B-gAF"/>
