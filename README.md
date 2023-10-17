@@ -14,9 +14,9 @@ Network call
 MapKit
 
 ## Screenshots
-<img src="f1_Kit/Images/mockF1_Kit3.PNG" width="270" height="500" /> <img src="f1_Kit/Images/mockF1_Kit2.PNG" width="270" height="500" />
+<img src="f1_Kit/Images/mockF1_Kit3.PNG" width="270" height="550" /> <img src="f1_Kit/Images/mockF1_Kit2.PNG" width="270" height="550" />
 
-<img src="f1_Kit/Images/mockF1_Kit1.PNG" width="270" height="500" /> <img src="f1_Kit/Images/mockF1_Kit4.PNG" width="270" height="500" />
+<img src="f1_Kit/Images/mockF1_Kit1.PNG" width="270" height="550" /> <img src="f1_Kit/Images/mockF1_Kit4.PNG" width="270" height="550" />
 
 ## To run the app
 User need to add a Key.plist file in order to run the app and add `apiKey` as key and you api key as value.
