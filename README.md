@@ -5,7 +5,7 @@ Bulid with fully native Swift and MVC.
 
 # Technologies used
 
-iOS storyboard
+iOS Interface Builder
 
 GCD
 
